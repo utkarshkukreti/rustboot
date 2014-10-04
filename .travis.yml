@@ -5,5 +5,6 @@ install:
   - sudo apt-get install rust-nightly nasm qemu imagemagick
 script:
   - sed -i 's/i386-elf-ld/ld/' Makefile
+  - sed -i 's/--target i386-intel-linux//' Makefile
   - make
   - ruby .travis.rb
